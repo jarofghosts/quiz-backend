@@ -1,0 +1,53 @@
+08-12 14:45:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Index "TIMESTAMP_INDEX" already exists; SQL statement:
+CREATE INDEX timestamp_index ON questions (timestamp) [42111-180]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.command.ddl.CreateIndex.update(CreateIndex.java:65)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:78)
+	at org.h2.command.Command.executeUpdate(Command.java:254)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:157)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:143)
+	at clojure.java.jdbc$db_do_prepared$fn__7887.invoke(jdbc.clj:690)
+	at clojure.java.jdbc$db_transaction_STAR_.doInvoke(jdbc.clj:546)
+	at clojure.lang.RestFn.invoke(RestFn.java:425)
+	at clojure.java.jdbc$db_do_prepared.doInvoke(jdbc.clj:689)
+	at clojure.lang.RestFn.applyTo(RestFn.java:142)
+	at clojure.core$apply.invoke(core.clj:630)
+	at clojure.java.jdbc$db_do_prepared.doInvoke(jdbc.clj:707)
+	at clojure.lang.RestFn.applyTo(RestFn.java:142)
+	at clojure.core$apply.invoke(core.clj:630)
+	at clojure.java.jdbc$db_do_prepared.doInvoke(jdbc.clj:684)
+	at clojure.lang.RestFn.invoke(RestFn.java:425)
+	at quiz_backend.db.schema$create_questions_table.invoke(schema.clj:42)
+	at quiz_backend.db.schema$create_tables.invoke(schema.clj:63)
+	at quiz_backend.handler$init.invoke(handler.clj:42)
+	at clojure.lang.Var.invoke(Var.java:375)
+	at ring.server.standalone$serve.doInvoke(standalone.clj:93)
+	at clojure.lang.RestFn.invoke(RestFn.java:423)
+	at ring.server.leiningen$serve.invoke(leiningen.clj:20)
+	at user$eval9411.invoke(form-init4130947207691007907.clj:1)
+	at clojure.lang.Compiler.eval(Compiler.java:6703)
+	at clojure.lang.Compiler.eval(Compiler.java:6693)
+	at clojure.lang.Compiler.load(Compiler.java:7130)
+	at clojure.lang.Compiler.loadFile(Compiler.java:7086)
+	at clojure.main$load_script.invoke(main.clj:274)
+	at clojure.main$init_opt.invoke(main.clj:279)
+	at clojure.main$initialize.invoke(main.clj:307)
+	at clojure.main$null_opt.invoke(main.clj:342)
+	at clojure.main$main.doInvoke(main.clj:420)
+	at clojure.lang.RestFn.invoke(RestFn.java:421)
+	at clojure.lang.Var.invoke(Var.java:383)
+	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+	at clojure.lang.Var.applyTo(Var.java:700)
+	at clojure.main.main(main.java:37)
+08-12 18:05:31 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "DO[*] 0"; expected "DELETE, DROP, DECLARE, DEALLOCATE, {"; SQL statement:
+DO 0 [42001-180]
+08-12 18:05:31 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "DO[*] 0"; expected "DELETE, DROP, DECLARE, DEALLOCATE, {"; SQL statement:
+DO 0 [42001-180]
+08-12 18:05:31 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "DO[*] 0"; expected "DELETE, DROP, DECLARE, DEALLOCATE, {"; SQL statement:
+DO 0 [42001-180]
