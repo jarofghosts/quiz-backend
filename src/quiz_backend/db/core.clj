@@ -20,9 +20,9 @@
                  (limit 1))))
 
 (defn save-quiz [name]
-  (insert quizzes
-  (set-fields {:name name
-               :timestamp (new java.util.Date)})))
+  ; wat
+  (second (first (insert quizzes
+  (values {:name name :timestamp (new java.util.Date)})))))
 
 (defn get-quizzes []
   (select quizzes))
@@ -34,14 +34,14 @@
                  (limit 1))))
 
 (defn save-question [quiz-id question]
-  (insert questions
-          (set-fields {:quizid quiz-id
+  (second (first (insert questions
+          (values {:quizid quiz-id
                        :question question
-                       :timestamp (new java.util.Date)})))
+                       :timestamp (new java.util.Date)})))))
 
 (defn save-answer [question-id answer correct]
-  (insert answers
-          (set-fields {:questionid question-id
+  (second (first (insert answers
+          (values {:questionid question-id
                        :answer answer
                        :correct correct
-                       :timestamp (new java.util.Date)})))
+                       :timestamp (new java.util.Date)})))))
